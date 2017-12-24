@@ -20,4 +20,4 @@ Player.prototype.getName = function() {
   return this.name;
 }
 
-module.exports = Player;
+// module.exports = Player;

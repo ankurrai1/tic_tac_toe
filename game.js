@@ -29,7 +29,7 @@ Game.prototype.getWinner = function() {
   return this.winner;
 }
 
-Game.prototype.storeWinnerName = function(winner) {
+Game.prototype.storeWinner = function(winner) {
   this.winner = winner;
 }
 
@@ -49,20 +49,19 @@ Game.prototype.hasWon = function() {
     [3, 6, 9]
   ];
   let player = this.getCurrPlayer();
-  let moves = player.moves;
+  let moves = player.getPlayerMoves();
   return winSets.some(function(winset) {
-    return isSubset(moves, winset);
+    return isSubset(moves,winset);
   });
 };
 
 
 
 
-
-
-
 const isSubset=function(list1,list2){
+
   return list2.every(function(num){
+    console.log(num);
     return list1.includes(num);
   });
 }

@@ -9,6 +9,7 @@ table{
 }
 
 table,td {
+  font-size: 40px;
   border: 2px solid black;
   width: 450px;
   height:150px;
