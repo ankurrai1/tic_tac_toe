@@ -1,0 +1,19 @@
+h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+table{
+  text-align: center;
+  font-size: 40px;
+}
+
+table,td {
+  border: 2px solid black;
+  width: 450px;
+  height:150px;
+  border-collapse: collapse;
+}
+td:hover{
+  background-color: steelBlue;
+}
