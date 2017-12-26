@@ -13,12 +13,12 @@ const displayDraw = function() {
 
 const updateGame = function(event) {
   let boxId = getMarkedBoxId(event);
+  if(game.isGameinPlay) {
+    continueGame(game,boxId);
+  }
   if(game.hasWon()) {
     game.isGameinPlay=false;
     displayWinner(game.getWinner());
-  }
-  if(game.isGameinPlay) {
-    continueGame(game,boxId);
   }
   if(game.isDrawn()) {
     game.isGameinPlay=false;

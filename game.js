@@ -61,7 +61,6 @@ Game.prototype.hasWon = function() {
 const isSubset=function(list1,list2){
 
   return list2.every(function(num){
-    console.log(num);
     return list1.includes(num);
   });
 }
