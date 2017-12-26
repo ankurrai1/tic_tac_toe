@@ -24,19 +24,18 @@ const updateGame = function(event) {
     game.isGameinPlay=false;
     displayDraw();
   }
+  game.getNextPlayer();
 };
 
 const continueGame = function(game,boxId) {
   let box = document.getElementById(boxId);
   let player = game.getCurrPlayer();
-  let name = player.getName();
   let symbol = player.getSymbol();
   if(!game.isInvalidMove(+boxId)) {
     game.storeWinner(player);
     drawSymbol(box,symbol);
     player.storeMove(+boxId);
     game.storeMove(+boxId);
-    game.getNextPlayer();
     displayTurn();
   }
 };

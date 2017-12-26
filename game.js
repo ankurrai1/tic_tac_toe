@@ -1,3 +1,15 @@
+const winSets = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [1, 5, 9],
+  [3, 5, 7],
+  [1, 4, 7],
+  [2, 5, 8],
+  [3, 6, 9]
+];
+
+
 let Game = function() {
   this.players = [];
   this.player1 = new Player("Player 1", "X");
@@ -38,29 +50,15 @@ Game.prototype.isDrawn = function() {
 };
 
 Game.prototype.hasWon = function() {
-  let winSets = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 5, 9],
-    [3, 5, 7],
-    [1, 4, 7],
-    [2, 5, 8],
-    [3, 6, 9]
-  ];
   let player = this.getCurrPlayer();
   let moves = player.getPlayerMoves();
   return winSets.some(function(winset) {
-    return isSubset(moves,winset);
+    return isSubset(moves, winset);
   });
 };
 
-
-
-
-const isSubset=function(list1,list2){
-
-  return list2.every(function(num){
+const isSubset = function(list1, list2) {
+  return list2.every(function(num) {
     return list1.includes(num);
   });
 }
