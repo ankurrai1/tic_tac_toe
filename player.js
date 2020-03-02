@@ -19,6 +19,7 @@ Player.prototype.getSymbol = function(move) {
   return this.symbol;
 };
 
+
 Player.prototype.getName = function() {
   return this.name;
 }
