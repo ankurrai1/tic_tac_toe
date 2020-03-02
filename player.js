@@ -4,6 +4,7 @@ let Player = function(name, symbol) {
   this.playerMoves = [];
 };
 
+
 Player.prototype.getPlayerMoves = function() {
   return this.playerMoves
 };
