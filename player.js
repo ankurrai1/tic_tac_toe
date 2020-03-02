@@ -14,6 +14,7 @@ Player.prototype.storeMove = function(move) {
   this.playerMoves.push(move);
 };
 
+
 Player.prototype.getSymbol = function(move) {
   return this.symbol;
 };
