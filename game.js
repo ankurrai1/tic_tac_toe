@@ -38,11 +38,11 @@ Game.prototype.getNextPlayer = function() {
 
 Game.prototype.getWinner = function() {
   return this.winner;
-}
+};
 
 Game.prototype.storeWinner = function(winner) {
   this.winner = winner;
-}
+};
 
 Game.prototype.isDrawn = function() {
   return this.totalMoves.length == 9;
@@ -60,4 +60,4 @@ const isSubset = function(list1, list2) {
   return list2.every(function(num) {
     return list1.includes(num);
   });
-}
+};
