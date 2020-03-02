@@ -9,6 +9,7 @@ Player.prototype.getPlayerMoves = function() {
   return this.playerMoves
 };
 
+
 Player.prototype.storeMove = function(move) {
   this.playerMoves.push(move);
 };
