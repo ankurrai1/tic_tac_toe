@@ -9,7 +9,6 @@ const winSets = [
   [3, 6, 9]
 ];
 
-
 let Game = function() {
   this.players = [];
   this.player1 = new Player("Player 1", "X");
