@@ -19,35 +19,27 @@ let Game = function() {
   this.isGameinPlay = true;
   this.winner;
 };
-
 Game.prototype.isInvalidMove = function(move) {
   return this.totalMoves.includes(move);
 };
-
 Game.prototype.storeMove = function(move) {
   this.totalMoves.push(move);
 };
-
 Game.prototype.getCurrPlayer = function() {
   return this.players[this.playerIndex];
 };
-
 Game.prototype.getNextPlayer = function() {
   this.playerIndex = 1 - this.playerIndex;
 };
-
 Game.prototype.getWinner = function() {
   return this.winner;
 };
-
 Game.prototype.storeWinner = function(winner) {
   this.winner = winner;
 };
-
 Game.prototype.isDrawn = function() {
   return this.totalMoves.length == 9;
 };
-
 Game.prototype.hasWon = function() {
   let player = this.getCurrPlayer();
   let moves = player.getPlayerMoves();
@@ -55,7 +47,6 @@ Game.prototype.hasWon = function() {
     return isSubset(moves, winset);
   });
 };
-
 const isSubset = function(list1, list2) {
   return list2.every(function(num) {
     return list1.includes(num);
