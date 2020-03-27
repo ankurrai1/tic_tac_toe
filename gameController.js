@@ -4,12 +4,12 @@ const displayWinner = function(player) {
   let display = document.getElementById("display");
   let name = player.getName();
   display.innerText =`congratulation ${name} has Won`;
-}
+};
 
 const displayDraw = function() {
   let display = document.getElementById("display");
   display.innerText =  ` Match Draw `;
-}
+};
 
 const updateGame = function(event) {
   let boxId = getMarkedBoxId(event);
